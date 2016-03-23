@@ -10,4 +10,8 @@
 
 @interface HomeCollCell : UICollectionViewCell
 
+@property (weak, nonatomic) IBOutlet UIButton *cellImage;
+@property (weak, nonatomic) IBOutlet UIButton *cellName;
+@property (weak, nonatomic) IBOutlet UILabel *cellPrice;
+
 @end
