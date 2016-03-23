@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginVC">
+            <connections>
+                <outlet property="fbBtn" destination="FGl-fy-XYy" id="S2w-NW-OWL"/>
+                <outlet property="googleBtn" destination="uYu-OQ-KjB" id="zTZ-eY-hky"/>
+                <outlet property="twitterBtn" destination="piz-ph-yHT" id="xnW-OY-NJz"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="musicbg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="J0o-qA-Z2E">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="584" id="dAO-4Q-h4f">
+                            <variation key="widthClass=compact" constant="600"/>
+                        </constraint>
+                        <constraint firstAttribute="width" constant="384" id="kqk-l6-V3u">
+                            <variation key="widthClass=compact" constant="400"/>
+                        </constraint>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="dAO-4Q-h4f"/>
+                            <exclude reference="kqk-l6-V3u"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="dAO-4Q-h4f"/>
+                            <include reference="kqk-l6-V3u"/>
+                        </mask>
+                    </variation>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGl-fy-XYy">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="E1O-kq-Cwb"/>
+                        <constraint firstAttribute="height" constant="70" id="akE-Ir-4Gq"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="facebook.png"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="E1O-kq-Cwb"/>
+                            <exclude reference="akE-Ir-4Gq"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="E1O-kq-Cwb"/>
+                            <include reference="akE-Ir-4Gq"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="didTappedFacebookLogin:" destination="-1" eventType="touchUpInside" id="rDD-xw-LE0"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYu-OQ-KjB">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="0La-Uh-BaW"/>
+                        <constraint firstAttribute="width" constant="80" id="Ysq-4o-z27"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="googleplus.png"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="0La-Uh-BaW"/>
+                            <exclude reference="Ysq-4o-z27"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="0La-Uh-BaW"/>
+                            <include reference="Ysq-4o-z27"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="didTappedGoogleLogin:" destination="-1" eventType="touchUpInside" id="huV-J0-XY1"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="piz-ph-yHT">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="L4x-D7-C3b"/>
+                        <constraint firstAttribute="height" constant="70" id="new-pU-cyq"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="twitter.png"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="L4x-D7-C3b"/>
+                            <exclude reference="new-pU-cyq"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="L4x-D7-C3b"/>
+                            <include reference="new-pU-cyq"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="didTappedTwitterLogin:" destination="-1" eventType="touchUpInside" id="g5V-YG-YrF"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="J0o-qA-Z2E" firstAttribute="leading" secondItem="FGl-fy-XYy" secondAttribute="trailing" constant="-129" id="9Em-JN-Plj">
+                    <variation key="widthClass=compact" constant="-137"/>
+                </constraint>
+                <constraint firstItem="piz-ph-yHT" firstAttribute="leading" secondItem="J0o-qA-Z2E" secondAttribute="trailing" constant="-129" id="KbI-7f-naP">
+                    <variation key="widthClass=compact" constant="-137"/>
+                </constraint>
+                <constraint firstItem="FGl-fy-XYy" firstAttribute="top" secondItem="J0o-qA-Z2E" secondAttribute="bottom" constant="-194" id="O7q-ci-ahc">
+                    <variation key="widthClass=compact" constant="-202"/>
+                </constraint>
+                <constraint firstItem="uYu-OQ-KjB" firstAttribute="leading" secondItem="J0o-qA-Z2E" secondAttribute="trailing" constant="-225" id="QDe-7M-Cmi">
+                    <variation key="widthClass=compact" constant="-233"/>
+                </constraint>
+                <constraint firstItem="piz-ph-yHT" firstAttribute="top" secondItem="J0o-qA-Z2E" secondAttribute="bottom" constant="-194" id="X4v-Hb-iCn">
+                    <variation key="widthClass=compact" constant="-202"/>
+                </constraint>
+                <constraint firstItem="J0o-qA-Z2E" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="ZfG-YZ-LH7"/>
+                <constraint firstItem="J0o-qA-Z2E" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="gQD-Zb-05q"/>
+                <constraint firstItem="uYu-OQ-KjB" firstAttribute="top" secondItem="J0o-qA-Z2E" secondAttribute="bottom" constant="-312" id="nes-8Y-bWY">
+                    <variation key="widthClass=compact" constant="-320"/>
+                </constraint>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="J0o-qA-Z2E"/>
+                    <exclude reference="FGl-fy-XYy"/>
+                    <exclude reference="uYu-OQ-KjB"/>
+                    <exclude reference="piz-ph-yHT"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="O7q-ci-ahc"/>
+                    <exclude reference="KbI-7f-naP"/>
+                    <exclude reference="X4v-Hb-iCn"/>
+                    <exclude reference="QDe-7M-Cmi"/>
+                    <exclude reference="nes-8Y-bWY"/>
+                    <exclude reference="9Em-JN-Plj"/>
+                    <exclude reference="ZfG-YZ-LH7"/>
+                    <exclude reference="gQD-Zb-05q"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="subviews">
+                    <include reference="J0o-qA-Z2E"/>
+                    <include reference="FGl-fy-XYy"/>
+                    <include reference="uYu-OQ-KjB"/>
+                    <include reference="piz-ph-yHT"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="O7q-ci-ahc"/>
+                    <include reference="KbI-7f-naP"/>
+                    <include reference="X4v-Hb-iCn"/>
+                    <include reference="QDe-7M-Cmi"/>
+                    <include reference="nes-8Y-bWY"/>
+                    <include reference="9Em-JN-Plj"/>
+                    <include reference="ZfG-YZ-LH7"/>
+                    <include reference="gQD-Zb-05q"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="237" y="464"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="facebook.png" width="256" height="256"/>
+        <image name="googleplus.png" width="128" height="128"/>
+        <image name="musicbg.jpg" width="510" height="737"/>
+        <image name="twitter.png" width="300" height="265"/>
+    </resources>
+</document>
